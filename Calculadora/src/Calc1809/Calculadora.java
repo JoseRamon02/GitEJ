@@ -2,7 +2,7 @@ package Calc1809;
 
 import java.text.DecimalFormat;
 import java.util.*;
-
+import java.math.*;
 //Jose Ramon Taviro
 public class Calculadora {
 
@@ -48,6 +48,14 @@ public class Calculadora {
 
 		resultado = valor1 / valor2;
 		System.out.println("El resultado de " + valor1 + " entre " + valor2 + " es: " + df.format(resultado));
+		return resultado;
+	}
+	
+	public static double RaizCuadrada(double valor2) {
+		double resultado = 0;
+
+		resultado = Math.sqrt(valor2);
+		System.out.println("El resultado de la raiz cuadrada de "+ valor2 + " es: " + df.format(resultado));
 		return resultado;
 	}
 
@@ -96,6 +104,12 @@ public class Calculadora {
 				Dividir(valor1, valor2);
 				break;
 			}
+			
+			case 5:{
+				RaizCuadrada(valor2);
+				break;
+			}
+			
 			case 0: {
 				System.exit(0);
 				break;
